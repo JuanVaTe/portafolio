@@ -106,13 +106,13 @@ const NavBar: React.FC = () => {
    `}
         >
           {navLinks.map((link, index) => (
-            <CustomNavLink key={index} link={link.hash} linkEn={link.en}>
+            <CustomNavLink key={index} link={link.hash} linkEn={link.esp}>
               {link.en === activeSection ? (
                 <div>
                   <span className="text-[--orange] absolute -left-5 top-0">
                     &lt;
                   </span>
-                  {language === "DE" ? link.de : link.en}
+                  {language === "ESP" ? link.en : link.esp}
                   {/* {link.de.toLocaleUpperCase()} */}
                 </div>
               ) : (
@@ -122,7 +122,7 @@ const NavBar: React.FC = () => {
                     setTimeOfLastClick(Date.now());
                   }}
                 >
-                  {language === "DE" ? link.de : link.en}
+                  {language === "ESP" ? link.en : link.esp}
 
                   {/* {link.de.toLocaleUpperCase()} */}
                 </div>

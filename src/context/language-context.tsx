@@ -1,6 +1,6 @@
 import { useEffect, useState, createContext, useContext } from "react";
 
-type language = "EN" | "DE";
+type language = "ESP" | "EN";
 
 type LanguageContextProviderProps = {
   children: React.ReactNode;
@@ -19,14 +19,14 @@ export default function LanguageContextProvider({
   const [language, setLanguage] = useState<language>("EN");
 
   const toggleLanguage = () => {
-    if (language === "EN") {
-      setLanguage("DE");
-      window.localStorage.setItem("language", "DE");
-      document.documentElement.classList.add("DE");
-    } else {
+    if (language === "ESP") {
       setLanguage("EN");
       window.localStorage.setItem("language", "EN");
-      document.documentElement.classList.remove("DE");
+      document.documentElement.classList.add("EN");
+    } else {
+      setLanguage("ESP");
+      window.localStorage.setItem("language", "ESP");
+      document.documentElement.classList.remove("ESP");
     }
   };
 
@@ -38,12 +38,12 @@ export default function LanguageContextProvider({
     if (localLanguage) {
       setLanguage(localLanguage);
 
-      if (localLanguage === "DE") {
-        document.documentElement.classList.add("DE");
+      if (localLanguage === "EN") {
+        document.documentElement.classList.add("EN");
       }
-    } else if (window.matchMedia("(prefers-color-scheme: DE)").matches) {
-      setLanguage("DE");
-      document.documentElement.classList.add("DE");
+    } else if (window.matchMedia("(prefers-color-scheme: ESP)").matches) {
+      setLanguage("ESP");
+      document.documentElement.classList.add("ESP");
     }
   }, []);
 

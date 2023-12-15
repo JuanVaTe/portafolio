@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import me from "../assets/img/me.webp";
-import { aboutMeData } from "../assets/lib/data";
+import { academicData } from "../assets/lib/data";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -13,7 +13,7 @@ import { useLanguage } from "../context/language-context";
 const AboutMe: React.FC = () => {
   const progressCircle = useRef<SVGSVGElement | null>(null);
   const progressContent = useRef<HTMLSpanElement | null>(null);
-  const { ref } = useSectionInView("About me");
+  const { ref } = useSectionInView("Academic");
   const { language } = useLanguage();
   const animationReference = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -32,12 +32,12 @@ const AboutMe: React.FC = () => {
     }
   };
   const paragraphs =
-    language === "DE" ? aboutMeData.paragraphs_DE : aboutMeData.paragraphs_EN;
+    language === "EN" ? academicData.paragraphs_ESP : academicData.paragraphs_EN;
 
   return (
     <React.Fragment>
-      <section className="about-me relative mt-16 " id="about-me" ref={ref}>
-        <div className="title-container flex flex-col gap-6 justify-center items-center p-32 w-1/2 max-lg:w-full max-lg:p-16 max-lg:items-start">
+      <section className="academic relative mt-16 " id="academic" ref={ref}>
+        <div className="title-container flex flex-col gap-6 justify-center items-center p-4 w-1/2 max-lg:w-full max-lg:p-16 max-lg:items-start">
           <motion.div
             ref={animationReference}
             style={{
@@ -48,14 +48,14 @@ const AboutMe: React.FC = () => {
           >
             <p className="text-[--black] mb-6">
               <span className="text-orange">&lt;</span>
-              {language === "DE" ? aboutMeData.title : aboutMeData.title_EN}
+              {language === "EN" ? academicData.title_ESP : academicData.title}
               <span className="text-orange">/&gt;</span>
             </p>
 
             <h2 className="text-[--black] text-center max-lg:text-left break-words">
-              {language === "DE"
-                ? aboutMeData.description
-                : aboutMeData.description_EN}
+              {language === "ESP"
+                ? academicData.description
+                : academicData.description_ESP}
             </h2>
           </motion.div>
         </div>

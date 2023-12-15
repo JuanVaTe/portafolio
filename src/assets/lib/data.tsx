@@ -1,58 +1,63 @@
-import adobexdicon from "../../assets/icons/adobexdicon.svg";
-import canvaicon from "../../assets/icons/canvaicon.svg";
-import figmaicon from "../../assets/icons/figmaicon.svg";
-import htmlicon from "../../assets/icons/htmlicon.svg";
-import cssicon from "../../assets/icons/cssicon.svg";
-import javascripticon from "../../assets/icons/javascripticon.svg";
-import typescripticon from "../../assets/icons/typescripticon.svg";
-import reacticon from "../../assets/icons/reacticon.svg";
-import nextjsicon from "../../assets/icons/nextjsicon.svg";
-import nodejsicon from "../../assets/icons/nodejsicon.svg";
-import tailwindcssicon from "../../assets/icons/tailwindicon.svg";
-import mongodbicon from "../../assets/icons/mongoicon.svg";
-import vuejsicon from "../../assets/icons/vueicon.svg";
-import expressicon from "../../assets/icons/expressicon.svg";
-import sassscssicon from "../../assets/icons/sassicon.svg";
-import trelloicon from "../../assets/icons/trelloicon.svg";
-import apiicon from "../../assets/icons/apiicon.svg";
-import axiosicon from "../../assets/icons/axiosicon.svg";
-import spotifyicon from "../../assets/icons/spotifyicon.svg";
-import netlifyicon from "../../assets/icons/netlifyicon.svg";
-import rendericon from "../../assets/icons/rendericon.svg";
-import jwticon from "../../assets/icons/jwticon.svg";
-import wordpressicon from "../../assets/icons/wordpressicon.svg";
-import shopifyicon from "../../assets/icons/shopifyicon.svg";
-import webflowicon from "../../assets/icons/webflowicon.svg";
-import tastyMockup from "../../assets/img/tasty_mockup.webp";
-import instorMockup from "../../assets/img/instor_mockup.webp";
-import silentmoonMockup from "../../assets/img/silentmoon_mockup.webp";
-import profilepicture from "../img/me2.webp";
-import caricon from "../../assets/icons/car-icon.svg";
-import travelicon from "../../assets/icons/travel-icon.svg";
-import hardwareicon from "../../assets/icons/hardware-icon.svg";
-import nextjsiconwhite from "../../assets/icons/nextjsiconwhite.svg";
-import expressiconwhite from "../../assets/icons/expressiconwhite.svg";
+import amazonlexicon from '../../assets/icons/amazonlexicon.svg';
+import amazonsagemakericon from '../../assets/icons/amazonsagemakericon.svg';
+import amazons3icon from '../../assets/icons/amazons3icon.svg';
+import androidstudioicon from '../../assets/icons/androidstudioicon.svg';
+import apachesparkicon from '../../assets/icons/apachesparkicon.svg';
+import awslambdaicon from '../../assets/icons/awslambdaicon.svg';
+import capicon from '../../assets/icons/capicon.svg';
+import datacampicon from '../../assets/icons/datacampicon.svg';
+import datacamporangeicon from '../../assets/icons/datacamporangeicon.svg';
+import firebaseicon from '../../assets/icons/firebaseicon.svg';
+import githubicon from '../../assets/icons/githubicon.svg';
+import giticon from '../../assets/icons/giticon.svg';
+import googleplayconsoleicon from '../../assets/icons/googleplayconsoleicon.svg';
+import intellijicon from '../../assets/icons/intellijicon.svg';
+import javaicon from '../../assets/icons/javaicon.svg';
+import jupytericon from '../../assets/icons/jupytericon.svg';
+import kerasicon from '../../assets/icons/kerasicon.svg';
+import matplotlibicon from '../../assets/icons/matplotlibicon.svg';
+import neuralnetworkicon from '../../assets/icons/neuralnetworkicon.svg';
+import numpyicon from '../../assets/icons/numpyicon.svg';
+import pandasicon from '../../assets/icons/pandas.svg';
+import pythonicon from '../../assets/icons/python.svg';
+import pysparkicon from '../../assets/icons/pysparkicon.svg';
+import reacticon from '../../assets/icons/reacticon.svg';
+import seabornicon from '../../assets/icons/seabornicon.svg';
+import sklearnicon from '../../assets/icons/sklearnicon.svg';
+import sqlicon from '../../assets/icons/sqlicon.svg';
+import statsmodelsicon from '../../assets/icons/statsmodelicon.svg';
+import tableauicon from '../../assets/icons/tableauicon.svg';
+import tensorflowicon from '../../assets/icons/tensorflowicon.svg';
+
+import bancodetiemposs from '../../assets/img/bancodetiemposs.webp';
+import caseStudy from '../../assets/img/casestudy.webp';
+import inegimock from '../../assets/img/inegireport.webp';
+import profilepicture from "../img/yo_bellasartes.webp";
+
 import { GoHome, GoPerson, GoMail, GoStack, GoProject } from "react-icons/go";
 import { FiGithub, FiLink, FiLinkedin, FiMail } from "react-icons/fi";
-import Imprint from "../../components/Imprint";
-import Privacy from "../../components/Privacy";
+import { FaProjectDiagram } from "react-icons/fa";
+import { SiDatacamp } from "react-icons/si";
 
 export const headerIntroData = {
   title: {
-    de: "Hi, ich bin Alpay",
-    en: "Hi, I'm Alpay",
+    en: "Hi, I'm Juan ",
+    esp: "Hola, soy Juan ",
   },
-  subtitle: "Fullstack Developer ",
+  subtitle: {
+    en: "Data Scientist",
+    esp: "Científico de datos"
+  },
   description: {
-    de: "Ich bin Alpay, ein Fullstack-Entwickler mit dem Ziel, meine Karriere voranzutreiben und an inspirierenden Projekten teilzunehmen. Hier präsentiere ich meine Arbeiten und meine Leidenschaft für die Webentwicklung. Lassen Sie uns gemeinsam digitale Lösungen gestalten und die Zukunft formen!",
-    en: "I'm Alpay, a fullstack developer with the goal of advancing my career and participating in inspiring projects. Here I present my work and my passion for web development. Let's shape digital solutions together and shape the future!",
+    en: "I'm Juan Varela, an aspiring data scientist with the goal of obtaining insights and generating values in inspiring and challenging projects. In this web page you will see some of my skills and projects. Let's change the world through data!",
+    esp: "Soy Juan Varela, un aspirante a científico de datos con el objetivo de obtener información y así generar valor en proyectos inspiradores y retadores. En esta página web verá mis habilidades así como algunos proyectos. ¡Cambiemos el mundo a traves de los datos!",
   },
   buttons: [
     {
       name: "Contact",
       label: {
-        de: "Kontaktiere mich",
         en: "Contact me",
+        esp: "Contáctame",
       },
       icon: FiMail,
       color: "main-btn",
@@ -60,10 +65,10 @@ export const headerIntroData = {
     {
       name: "Projects",
       label: {
-        de: "Meine Projekte",
         en: "My Projects",
+        esp: "Mis Proyectos",
       },
-      icon: FiGithub,
+      icon: FaProjectDiagram,
       color: "secondary-btn",
     },
   ],
@@ -72,26 +77,23 @@ export const headerIntroData = {
 
 export const projectsData = [
   {
-    title: "Tasty App",
+    title: "Case Study - Tasty Bytes",
     description:
-      "Eine Rezepte App, die wir als Team mit React und der MealDB API gebaut haben. Ich war der Front-End Entwickler und habe Features wie Voice Search oder Print to PDF programmiert. Das Design wurde mit Figma erstellt. Die Website ist responsive und mobile-optimiert.",
-    description_EN:
-      "A recipe app that we built as a team with React and the MealDB API. I was the front-end developer and programmed features like voice search or print to PDF. The design was created with Figma. The website is responsive and mobile-optimized.",
+      "A case study for the DataCamp Data Scientist Professional Certification. Tasty Bytes is a fictional web application that offers recipes easy to make and highly nutritious. However, the Product Manager manually chooses a recipe for the home page every day. We are asked for the automation of this process.",
+    description_ESP:
+      "Un caso de estudio para la certificación de Científico de Datos Profesional de DataCamp. Tasty Bytes es una aplicación web ficticia que ofrece recetas balanceadas y fáciles de hacer. Sin embargo, el Administrador de Productos escoge manualmente una receta todos los dias para la página principal. Se me asignó automatizar este proceso.",
     technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "REST Api", icon: apiicon },
-      { name: "React", icon: reacticon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Canva", icon: canvaicon },
-      { name: "Netlify", icon: netlifyicon },
-      { name: "Trello", icon: trelloicon },
+      { name: "Python", icon: pythonicon },
+      { name: "Pandas", icon: pandasicon },
+      { name: "Numpy", icon: numpyicon },
+      { name: "Matplotlib", icon: matplotlibicon },
+      { name: "Seaborn", icon: seabornicon },
+      { name: "Scikit Learn", icon: sklearnicon },
+      { name: "Jupyter", icon: jupytericon },
+      { name: "DataCamp", icon: datacampicon },
     ],
-    image: tastyMockup,
-    deploymenturl: "https://delightful-cheesecake-9b19f0.netlify.app/",
-    githuburl: "https://github.com/AlpayC/Frontend_Abschlussprojekt_Tasty",
-    githubicon: FiGithub,
+    image: caseStudy,
+    deploymenturl: "https://app.datacamp.com/workspace/w/12cd18fb-4c0b-4c84-ba74-865cfd6751ff",
     deploymenticon: FiLink,
     colors: {
       main: "main-btn",
@@ -101,62 +103,52 @@ export const projectsData = [
     },
   },
   {
-    title: "Silentmoon",
+    title: 'INEGI - Graph Generating Chatbot',
     description:
-      "Eine Yoga und Meditations App, die wir als Team mit React, MongoDB, Express und Node.js gebaut haben. Meine Aufgabe als Gitmaster und Backend Entwickler bestand darin, das Backend mit Anbindung anhand einer Restful API zu programmieren und die Datenbank in MongoDB zu modellieren.",
-    description_EN:
-      "A yoga and meditation app that we built as a team with React, MongoDB, Express and Node.js. My task as a gitmaster and backend developer was to program the backend with connection using a restful API and to model the database in MongoDB.",
+        'Development of a web application together with INEGI for the automatic generation of graphs using Natural Language Processing (NLP) and cloud computing. This project involved the investigation of different NLP strategies and cloud computing architectures.',
+    description_ESP:
+        'Desarrollo de una aplicación web en conjunto con el INEGI para la generación de gráficas utilizando Procesamiento de Lenguaje Natural (NLP) y computación en la nube. Este proyecto consistió de la investigación de diferentes estrategias de NLP y arquitecturas en la nube.',
     technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "Spotify Api", icon: spotifyicon },
-      { name: "React", icon: reacticon },
-      { name: "JWT & Bcrypt", icon: jwticon },
-      { name: "Axios", icon: axiosicon },
-      { name: "MongoDB", icon: mongodbicon },
-      { name: "Express", icon: expressiconwhite },
-      { name: "Node.js", icon: nodejsicon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Render", icon: rendericon },
+      { name: 'Apache Spark', icon: apachesparkicon},
+      { name: "PySpark", icon: pysparkicon},
+      { name: "Python", icon: pythonicon },
+      { name: 'TensowFlow', icon: tensorflowicon},
+      { name: 'Jupyter', icon: jupytericon},
+      { name: 'Amazon Lex', icon: amazonlexicon},
+      { name: 'AWS Lambda', icon: awslambdaicon},
+      { name: 'Amazon S3', icon: amazons3icon},
+      { name: 'Tableau', icon: tableauicon},
+      { name: 'React', icon: reacticon}
     ],
-    image: silentmoonMockup,
-    deploymenturl: "https://silentmoon-grpw.onrender.com/",
-    githuburl:
-      "https://github.com/AlpayC/Fullstack_Abschlussprojekt_SilentMoon",
-    githubicon: FiGithub,
+    image: inegimock,
+    deploymenturl: 'https://www.youtube.com/watch?v=4s1FentY7a8',
     deploymenticon: FiLink,
+    githuburl: 'https://github.com/retoINEGI',
+    githubicon: FiGithub,
     colors: {
-      main: "main-btn",
-      second: "secondary-btn",
-      icon: "white",
-      projectcolor: "#FFD5BD",
-    },
+      main: 'main-btn',
+      second: 'secondary-btn',
+      icon: 'white',
+      projectcolor: '#E3964A'
+    }
   },
   {
-    title: "Furniture Organizer",
+    title: "Banco de Tiempo - A social initiative",
     description:
-      "Eine Möbel-Organizer App, die wir als Duo-Team mit React, MongoDB, Express und Node.js programmiert haben. Als Gitmaster habe ich die Verknüpfung des Frontends mit dem Backend und die Datenbankmodellierung übernommen. Die App ist responsive und mobile-optimiert.",
-    description_EN:
-      "A furniture organizer app that we programmed as a duo team with React, MongoDB, Express and Node.js. As a gitmaster, I took over the connection of the frontend to the backend and the database modeling. The app is responsive and mobile-optimized.",
+      "Banco de Tiempo is a Mobile app that allows for the hiring of different services without the use of money, but of time credits. In collaboration with ICATI, governmental dependency.",
+    description_ESP:
+      "Banco de Tiempo es una aplicación móvil que permite la contratación de diferentes servicios sin el uso de dinero, sino con la alternativa de usar tiempo. En colaboración con el ICATI, dependencia gubernamental.",
     technologies: [
-      { name: "Html", icon: htmlicon },
-      { name: "CSS", icon: cssicon },
-      { name: "JavaScript", icon: javascripticon },
-      { name: "React", icon: reacticon },
-      { name: "JWT & Bcrypt", icon: jwticon },
-      { name: "Axios", icon: axiosicon },
-      { name: "MongoDB", icon: mongodbicon },
-      { name: "Express", icon: expressiconwhite },
-      { name: "Node.js", icon: nodejsicon },
-      { name: "Figma", icon: figmaicon },
-      { name: "Render", icon: rendericon },
-      { name: "Trello", icon: trelloicon },
+      { name: "Android Studio", icon: androidstudioicon },
+      { name: "Java", icon: javaicon },
+      { name: "IntelliJ", icon: intellijicon },
+      { name: "Firebase", icon: firebaseicon },
+      { name: "Google Play Console", icon: googleplayconsoleicon },
+      { name: "Git", icon: giticon },
+      { name: "GitHub", icon: githubicon },
     ],
-    image: instorMockup,
-    deploymenturl: "https://mern-haushaltsbuch.onrender.com/",
-    githuburl: "https://github.com/AlpayC/Furniture_MERN",
-    githubicon: FiGithub,
+    image: bancodetiemposs,
+    deploymenturl: "https://play.google.com/store/apps/details?id=com.bancodetiempo.bancodetiempodeluxe&hl=es_PE&gl=US",
     deploymenticon: FiLink,
     colors: {
       main: "main-btn",
@@ -169,127 +161,113 @@ export const projectsData = [
 
 export const liveTickerData = {
   content: {
-    de: "Weitere Projekte auf Github",
-    en: "More Projects on Github",
+    en: "Check out my LinkedIn!",
+    esp: "¡Visita mi LinkedIn!",
   },
 } as const;
 
-export const skillsDataWeb = [
+export const skillsDataDataScience = [
   {
-    skillsTitle: "WebDevelopment",
+    skillsTitle: "Data Science",
     skills: [
       {
-        title: "HTML",
-        hash: "#html",
-        icon: htmlicon,
-        color: "#F1662A",
+        title: "Python",
+        hash: "#Python",
+        icon: pythonicon,
+        color: "#fadb51",
       },
       {
-        title: "CSS",
-        hash: "#CSS",
-        icon: cssicon,
-        color: "#1572B6",
+        title: "Pandas",
+        hash: "#Pandas",
+        icon: pandasicon,
+        color: '#262335'
       },
       {
-        title: "JavaScript",
-        hash: "#JavaScript",
-        icon: javascripticon,
-        color: "#F7DF1E",
+        title: "Matplotlib",
+        hash: "#Matplotlib",
+        icon: matplotlibicon,
+        color: "#e3ae5b",
       },
       {
-        title: "TypeScript",
-        hash: "#TypeScript",
-        icon: typescripticon,
-        color: "#007ACC",
+        title: "Numpy",
+        hash: "#Numpy",
+        icon: numpyicon,
+        color: "#4c76cd",
       },
       {
-        title: "React",
-        hash: "#React",
-        icon: reacticon,
-        color: "#61DAFB",
+        title: "Seaborn",
+        hash: "#Seaborn",
+        icon: seabornicon,
+        color: "#5b7ca1",
       },
       {
-        title: "Next.js",
-        hash: "#Next.js",
-        icon: [nextjsicon, nextjsiconwhite],
-        color: ["#000000", "#FFFFFF"],
+        title: "Scikit Learn",
+        hash: "#ScikitLearn",
+        icon: sklearnicon,
+        color: "#f69936",
       },
       {
-        title: "Node.js",
-        hash: "#Node.js",
-        icon: nodejsicon,
-        color: "#339933",
+        title: "Statsmodels",
+        hash: "#Statsmodels",
+        icon: statsmodelsicon,
+        color: "#3f50b4",
       },
       {
-        title: "Tailwind",
-        hash: "#Tailwind",
-        icon: tailwindcssicon,
-        color: "#38B2AC",
+        title: "SQL",
+        hash: "#SQL",
+        icon: sqlicon,
+        color: "#157df9",
       },
       {
-        title: "MongoDB",
-        hash: "#MongoDB",
-        icon: mongodbicon,
-        color: "#449C45",
-      },
-      {
-        title: "Vue.js",
-        hash: "#Vue.js",
-        icon: vuejsicon,
-        color: "#4FC08D",
-      },
-      {
-        title: "Express",
-        hash: "#Express",
-        icon: [expressicon, expressiconwhite],
-        color: ["#000000", "#FFFFFF"],
-      },
-      {
-        title: "SASS/SCSS",
-        hash: "#SASS/SCSS",
-        icon: sassscssicon,
-        color: "#CC6699",
+        title: "Git",
+        hash: "#Git",
+        icon: giticon,
+        color: "#ee4f30",
       },
     ],
   },
 ] as const;
 
-export const skillsDataDesign = [
+export const skillsDataMachineLearning = [
   {
-    skillsTitle: "Design",
+    skillsTitle: "Machine Learning",
     skills: [
-      { title: "Figma", hash: "#Figma", icon: figmaicon, color: "#F24E1E" },
       {
-        title: "Adobe XD",
-        hash: "#Adobe XD",
-        icon: adobexdicon,
-        color: "#FF61F6",
+        title: "TensorFlow",
+        hash: "#TensorFlow",
+        icon: tensorflowicon,
+        color: "#ff7700",
       },
-      { title: "Canva", hash: "#Canva", icon: canvaicon, color: "#00C4CC" },
+      {
+        title: "Keras",
+        hash: "#Keras",
+        icon: kerasicon,
+        color: "#ce0000",
+      },
     ],
   },
 ] as const;
 
-export const skillsDataCMS = [
+export const skillsDataCloudComputing = [
   {
-    skillsTitle: "CMS",
+    skillsTitle: "Cloud Computing",
     skills: [
       {
-        title: "WordPress",
-        hash: "#WordPress",
-        icon: wordpressicon,
-        color: "#21759B",
+        title: "AWS Lambda",
+        hash: "#AWS Lambda",
+        icon: awslambdaicon,
+        color: "#f97d14",
       },
       {
-        title: "Shopify",
-        hash: "#Shopify",
-        icon: shopifyicon,
-        color: "#7AB55C",
+        title: "Amazon S3",
+        hash: "#Amazon S3",
+        icon: amazons3icon,
+        color: "#e15241",
       },
       {
-        title: "Webflow",
-        hash: "#Webflow",
-        icon: webflowicon,
+        title: "Amazon Sagemaker",
+        hash: "#Amazon Sagemaker",
+        icon: amazonsagemakericon,
         color: "#4353FF",
       },
     ],
@@ -297,36 +275,31 @@ export const skillsDataCMS = [
 ] as const;
 
 export const navLinks = [
-  { de: "Home", en: "Home", hash: "#home", icon: GoHome },
-  { de: "Skills", en: "Skills", hash: "#skills", icon: GoStack },
-  { de: "Projekte", en: "Projects", hash: "#projects", icon: GoProject },
-  { de: "Über mich", en: "About me", hash: "#about-me", icon: GoPerson },
-  { de: "Kontakt", en: "Contact", hash: "#contact", icon: GoMail },
-] as const;
-
-export const FooterLinks = [
-  { de: "Impressum", en: "Imprint", hash: "#imprint", data: <Imprint /> },
-  { de: "Datenschutz", en: "Privacy", hash: "#privacy", data: <Privacy /> },
+  { en: "Home", esp: "Home", hash: "#home", icon: GoHome },
+  { en: "Skills", esp: "Habilidades", hash: "#skills", icon: GoStack },
+  { en: "Projects", esp: "Proyectos", hash: "#projects", icon: GoProject },
+  { en: "Academic", esp: "Académico", hash: "#academic", icon: GoPerson },
+  { en: "Contact", esp: "Contacto", hash: "#contact", icon: GoMail },
 ] as const;
 
 export const sideBarRightMail = {
-  link: "mailto:myemail@com",
-  text: "myemail@com",
+  link: "mailto:jcvate2013@hotmail.com",
+  text: "jcvate2013",
 } as const;
 
 export const sideBarLeftSocials = [
   {
-    link: "https://www.linkedin.com/in/alpay/",
+    link: "https://www.linkedin.com/in/juanvate/",
     icon: FiLinkedin,
     altimgname: "linkedin",
   },
   {
-    link: "https://github.com/AlpayC",
-    icon: FiGithub,
+    link: "https://www.datacamp.com/portfolio/JuanVaTe?view=true",
+    icon: SiDatacamp,
     altimgname: "github",
   },
   {
-    link: "mailto:myemail@com",
+    link: "mailto:jcvate2013@hotmail.com",
     icon: FiMail,
     altimgname: "mail",
   },
@@ -334,130 +307,130 @@ export const sideBarLeftSocials = [
 
 export const quotesData = [
   {
-    de: '"Es ist überhaupt nicht wichtig, es beim ersten Mal richtig zu machen. Es ist entscheidend, es beim letzten Mal richtig zu machen."',
-    en: `"It's not at all important to get it right the first time. It's vitally important to get it right the last time."`,
-    author: "Andrew Hunt",
+    en: '"What is not defined cannot be measured. What is not measured, cannot be improved. What is not improved, is always degraded."',
+    esp: `"Lo que no se define no se puede medir. Lo que no se mide, no se puede mejorar. Lo que no se mejora, se degrada siempre."`,
+    author: "William Thompson Kelvin",
   },
   {
-    de: '"Das Web ist wie eine Leinwand und der Code ist die Farbe. Erschaffe dein Meisterwerk."',
-    en: `"The web is like a canvas, and code is the paint. Create your masterpiece."`,
+    en: '"Visualization gives you answers to questions you didn’t know you had."',
+    esp: `"La visualización te da respuestas a preguntas que no sabías que tenías."`,
   },
 ] as const;
 
-export const aboutMeData = {
-  title: "Über mich",
-  title_EN: "About me",
-  description: "Ein paar Codeschnippsel über mich",
-  description_EN: "A few code snippets about me",
-  paragraphs_DE: [
-    {
-      title: "Die Schaltkreise meines Herzens",
-      description:
-        "Wenn ich nicht in der digitalen Welt unterwegs bin, durchstreife ich die faszinierende Welt der Technik und Hardware. Schaltkreise und Lötstellen sind für mich wie Puzzleteile eines aufregenden Abenteuers.",
-      icon: hardwareicon,
-    },
-    {
-      title: "Auf der Überholspur des Lebens",
-      description:
-        "Neben dem Coden befinde ich mich gerne auf der Überholspur – im wahrsten Sinne des Wortes. Autos sind meine Leidenschaft, und ich genieße es, mit PS-starken Maschinen auf unbekannten Straßen unterwegs zu sein.",
-      icon: caricon,
-    },
-    {
-      title: "Entdeckungsfreude als Lebensmotto",
-      description:
-        "Meine Reise als Webentwickler ist nur ein Teil meines Lebenswegs. Ich lebe nach dem Motto, dass das Abenteuer erst beginnt, wenn man das Bekannte hinter sich lässt. Das Entdecken neuer Orte ist meine Form der kreativen Inspiration.",
-      icon: travelicon,
-    },
-  ],
+export const academicData = {
+  title: "Academic",
+  title_ESP: "Académico",
+  description: "Highlights of my academic career.",
+  description_ESP: "Hitos de mi carrera académica.",
   paragraphs_EN: [
     {
-      title: "The Circuits of My Heart",
+      title: "My Alma Mater",
       description:
-        "When I'm not navigating the digital world, I explore the fascinating realm of technology and hardware. Circuits and solder joints are like puzzle pieces to me in an exciting adventure.",
-      icon: hardwareicon,
+        "I'm a graduate of the prestigious university of Tec de Monterrey, with a Bachelor's Degree on Computer Science and an specialization in Data Science. Every day in my university was incredible and I keep my alma mater at heart.",
+      icon: capicon,
     },
     {
-      title: "On the Fast Lane of Life",
+      title: "Deep Learning",
       description:
-        "Besides coding, I like to be on the fast lane - in the truest sense of the word. Cars are my passion, and I enjoy being on unknown roads with powerful machines.",
-      icon: caricon,
+        "I have numerous certifications issued by DeepLearningAI, leading company in machine learning teaching. Some of these certifications are Structuring Machine Learning Projects and Improving Deep Neural Networks.",
+      icon: neuralnetworkicon,
     },
     {
-      title: "The Joy of Discovery as a Life Motto",
+      title: "Data Science Professional",
       description:
-        "My journey as a web developer is only a part of my life path. I live by the motto that the adventure only begins when you leave the familiar behind. Discovering new places and cultures is my form of creative inspiration.",
-      icon: travelicon,
+        "Data Science is my passion. Since I graduated, I dedicated my time to prepare myself to be competitive in the Data Science area. After months of studying, I completed the Professional Data Science Track of DataCamp.",
+      icon: datacamporangeicon,
+    },
+  ],
+  paragraphs_ESP: [
+    {
+      title: "Mi Alma Mater",
+      description:
+        "Soy egresado de la prestigiosa universidad del Tec de Monterrey, graduado de una Ingeniería en Tecnologías Computacionales y una especialización en Ciencia de Datos. Cada día en mi universidad fue increíble y siempre tengo a mi alma mater presente.",
+      icon: capicon,
+    },
+    {
+      title: "Aprendizaje Profundo",
+      description:
+        "Tengo distintas certificaciones emitidas por DeepLearningAI, compañía lider en enseñar Aprendizaje Automático. Algunas de estas certificaciones son Estructuración de Proyectos de Aprendizaje Automático y Mejorando Redes Neuronales Profundas.",
+      icon: neuralnetworkicon,
+    },
+    {
+      title: "Profesional como Científico de Datos",
+      description:
+        "La Ciencia de Datos es mi pasión. Desde que me gradué, he dedicado mi tiempo para preparame y ser competitivo en el área de Ciencia de Datos. Después de meses de estudio, completé el Temario Profesional de Ciencia de Datos, emitido por DataCamp.",
+      icon: datacamporangeicon,
     },
   ],
 };
 
 export const contactData = {
   title: {
-    de: "Kontakt",
     en: "Contact",
+    esp: "Contacto",
   },
   description: {
-    de: "Schreib mir eine Nachricht und ich melde mich bei dir.",
     en: "Write me a message and I will get back to you.",
+    esp: "Envíame un mensaje y me contactaré contigo.",
   },
   inputfields: [
     {
       name: "name",
       placeholder: {
-        de: "Dein Name",
         en: "Your Name",
+        esp: "Tu Nombre",
       },
       type: "text",
       validation: {
-        de: "Bitte gebe deinen Namen ein",
         en: "Please fill in your name",
+        esp: "Por favor ingresa tu nombre",
       },
       pattern: "{2}",
     },
     {
       name: "email",
       placeholder: {
-        de: "Deine E-Mail Adresse",
         en: "Your E-Mail",
+        esp: "Tu Correo Electrónico",
       },
       type: "email",
       validation: {
-        de: "Bitte gebe deine Email ein",
         en: "Please fill in your email",
+        esp: "Por favor ingresa tu correo electrónico",
       },
       pattern: "[@]{4}",
     },
     {
       name: "subject",
       placeholder: {
-        de: "Deine Betreff",
         en: "Your Subject",
+        esp: "Tu Asunto",
       },
       type: "text",
       validation: {
-        de: "Bitte gebe einen Betreff ein",
         en: "Please fill in your subject",
+        esp: "Por favor ingresa tu asunto",
       },
       pattern: "{10}",
     },
   ],
   textarea: {
     placeholder: {
-      de: "Deine Nachricht",
       en: "Your Message",
+      esp: "Tu Mensaje",
     },
     name: "message",
     rows: 10,
     validation: {
-      de: "Bitte gebe deine Nachricht ein",
       en: "Please fill in your message",
+      esp: "Por favor ingresa tu mensaje",
     },
     pattern: "{10}",
   },
   button: {
     value: {
-      de: "Absenden",
       en: "Send",
+      esp: "Enviar",
     },
   },
   icon: FiMail,
@@ -469,39 +442,39 @@ export const contactData = {
   },
   privacyOptIn: {
     checkbox: {
-      de: "Ich stimme zu, dass Alpay meine personenbezogenen Daten (Name und E-Mail-Adresse) verwenden darf, um mit mir Kontakt aufzunehmen.",
-      en: "I agree that Alpay may use my personal data (name and e-mail address) to contact me.",
+      en: "I agree that Juan Varela may use my personal data (name and e-mail address) to contact me.",
+      esp: "Acepto que Juan Varela puede usar mi información personal (nombre y correo electrónico) para contactarme.",
     },
     description: {
-      de: "Durch Übermittlung dieser Anfrage bestätigen Sie, dass Sie die Datenschutzerklärung gelesen haben",
       en: "By submitting this request, you acknowledge that you have read the Private Policy",
+      esp: "Al entregar esta solicitud, reconoces que has leído la Política de Privacidad",
     },
   },
 } as const;
 
 export const toastMessages = {
   loadingProject: {
-    de: "🦄 Die Live Demo wird gleich geöffnet. Server werden gestartet...",
-    en: "🦄 The live demo will open shortly. Starting servers...",
+    en: "The project will open shortly.",
+    esp: "El proyecto va a cargar pronto.",
   },
   successEmailSent: {
-    de: "🦄 Vielen Dank für deine Email. Ich werde mich schnellstmöglich bei dir melden",
-    en: "🦄 Thank you for your email. I will get back to you as soon as possible",
+    en: "Thank you for your email. I will get back to you as soon as possible",
+    esp: "Gracias por tu correo. Me contactaré tan pronto como me sea posible",
   },
   failedEmailSent: {
-    de: "🦄 Leider hat der Versand deiner Email nicht geklappt. Bitte versuche es später noch einmal",
-    en: "🦄 Unfortunately the sending of your email did not work. Please try again later",
+    en: "Unfortunately the sending of your email did not work. Please try again later",
+    esp: "Desafortunada el envío de su correo no funcionó. Por favor intenta otra vez",
   },
   failedValidationName: {
-    de: "Bitte gebe deinen Namen ein",
     en: "Please fill in your name",
+    esp: "Por favor ingresa tu nombre",
   },
 } as const;
 
 export const buttonLabels = {
   language: {
-    de: "DE",
     en: "EN",
+    esp: "ESP",
   },
 } as const;
 

@@ -3,9 +3,9 @@ import {
   BsMoon,
   BsSun,
   BsLinkedin,
-  BsFillEnvelopeAtFill,
-  BsGithub,
+  BsFillEnvelopeAtFill
 } from "react-icons/bs";
+import { SiDatacamp } from "react-icons/si";
 import { sideBarLeftSocials } from "../assets/lib/data";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -81,7 +81,7 @@ export default function ThemeSwitch() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <BsGithub />
+          <SiDatacamp />
         </Link>
       </button>
       <button

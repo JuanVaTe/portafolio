@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import Button from "./Button";
-import axios from "axios";
 import { Highlight, themes } from "prism-react-renderer";
 import { contactData, toastMessages } from "../assets/lib/data.tsx";
 import { useSectionInView } from "../assets/lib/hooks";
@@ -9,10 +8,10 @@ import { ToastContainer, toast } from "react-toastify";
 import { useTheme } from "../context/theme-context";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const Contact: React.FC = () => {
-  const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || "";
-
+  const databaseURL = import.meta.env.VITE_DATABASE_URL;
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [subject, setSubject] = useState<string>("");
@@ -38,21 +37,32 @@ const Contact: React.FC = () => {
 
     e.preventDefault();
     const data = new FormData(e.currentTarget);
+    for (const [key, value] of data) {
+      console.log(`${key}: ${value}\n`);
+    }
 
     try {
-      const response = await axios.post(apiBaseUrl, data);
-      console.log(response);
-      if (language === "DE") {
-        toast.success(toastMessages.successEmailSent.de);
-      } else {
+      await axios({
+        method: 'put',
+        url: databaseURL + 'notifs/' + data.get('name') + '.json',
+        data: {
+          name: data.get('name'),
+          email: data.get('email'),
+          subject: data.get('subject'),
+          message: data.get('message')
+        }
+      });
+      if (language === "EN") {
         toast.success(toastMessages.successEmailSent.en);
+      } else {
+        toast.success(toastMessages.successEmailSent.esp);
       }
     } catch (error) {
       console.log(error);
-      if (language === "DE") {
-        toast.error(toastMessages.failedEmailSent.de);
-      } else {
+      if (language === "EN") {
         toast.error(toastMessages.failedEmailSent.en);
+      } else {
+        toast.error(toastMessages.failedEmailSent.esp);
       }
       setError("An Error occured, try again later");
     }
@@ -120,29 +130,42 @@ const Contact: React.FC = () => {
   }, []);
 
   const codeSnippet = `
-import  { useState } from "react";
+import pandas as pd
+import numpy as np
+import sklearn as sk
+from sk.linear_model import LinearRegression
 
-// 🌈 Spreading Stardust: 
-// Crafting Cosmic Email 🌌
+# Get data
 
-const [sender, setSender] = "${name}${
+name = "${name}${
     lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""
-  }🚀";
-const [recipient, setRecipient] = "${email}${
+  }"
+email = "${email}${
     lastUpdatedField === "email" ? (cursorBlink ? "|" : " ") : ""
-  }📧";
-const [subject, setSubject] = \n"${subject}${
+  }"
+subject = "${subject}${
     lastUpdatedField === "subject" ? (cursorBlink ? "|" : " ") : ""
-  }✨";
-const [message, setMessage] = 
-\`Hello, intrepid traveler! 👋\n
-Across the cosmos, a message for you:\n
-"${wordWrap(message, 40, " ")}${
+  }"
+message = "${wordWrap(message, 40, " ")}${
     lastUpdatedField === "message" ? (cursorBlink ? "|" : " ") : ""
-  }"\n
-Wishing you stardust dreams,\n
-${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
-\``;
+  }"
+
+df = pd.DataFrame({
+  'name': [name],
+  'email': [email],
+  'subject': [subject],
+  'message': [message],
+  'contact_back': True
+})
+
+X = df.drop('contact_back', axis=1)
+y = df['contact_back']
+
+linear_reg = LinearRegression()
+
+linear_reg.fit(X, y)
+
+linear_reg.score(X, y) # Score of 1.0 = 100%`;
 
   //   const codeSnippet2 = `
   // // 🚀 Initiating Quantum Email Transmission 🪐
@@ -191,22 +214,22 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
           >
             <p className="text-[--black] mb-6">
               <span className="text-[--orange]">&lt;</span>
-              {language === "DE" ? contactData.title.de : contactData.title.en}
+              {language === "EN" ? contactData.title.esp : contactData.title.en}
               <span className="text-[--orange]">/&gt;</span>
             </p>
 
             <h2 className="text-[--black] text-center">
-              {language === "DE"
-                ? contactData.description.de
+              {language === "EN"
+                ? contactData.description.esp
                 : contactData.description.en}
             </h2>
           </motion.div>
         </div>
-        <div className="flex flex-row justify-center items-start px-32 pt-32 mb-32 max-lg:flex-col max-lg:p-10">
+        <div className="flex flex-row justify-center items-start px-32 pt-8 mb-32 max-lg:flex-col max-lg:p-10">
           <div className="w-1/2  bg-[--darkblue] text-[--white] flex flex-col justify-center items-start gap-24 rounded-2xl p-20 border-solid border-[0.4rem] border-[--lightblue] hover:border-orange duration-500 transition-all  quote-outer-container text-left max-lg:hidden cursor-progress">
             <Highlight
               code={codeSnippet}
-              language="tsx"
+              language="python"
               theme={themes.nightOwl}
             >
               {({ className, style, tokens, getLineProps, getTokenProps }) => (
@@ -232,8 +255,8 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 key={index}
                 type={input.type}
                 placeholder={
-                  language === "DE"
-                    ? `${input.placeholder.de}`
+                  language === "EN"
+                    ? `${input.placeholder.esp}`
                     : `${input.placeholder.en}`
                 }
                 name={input.name}
@@ -266,8 +289,8 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
             <textarea
               rows={contactData.textarea.rows}
               placeholder={
-                language === "DE"
-                  ? `${contactData.textarea.placeholder.de}`
+                language === "EN"
+                  ? `${contactData.textarea.placeholder.esp}`
                   : `${contactData.textarea.placeholder.en}`
               }
               name={contactData.textarea.name}
@@ -284,7 +307,7 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 theme === "dark"
                   ? "bg-[--blackblue] dark-mode-shadow"
                   : "bg-[--icewhite] dark-shadow"
-              }`}
+              } mb-16`}
             />
             <div className="privacy-checkbox flex gap-16">
               <label
@@ -299,21 +322,16 @@ ${name}${lastUpdatedField === "name" ? (cursorBlink ? "|" : " ") : ""}
                 />
                 <span className="checkbox"></span>
               </label>
-              <p>
-                {language === "DE"
-                  ? `${contactData.privacyOptIn.checkbox.de}`
+              <p className='mb-16'>
+                {language === "EN"
+                  ? `${contactData.privacyOptIn.checkbox.esp}`
                   : `${contactData.privacyOptIn.checkbox.en}`}
               </p>
             </div>
-            <p>
-              {language === "DE"
-                ? `${contactData.privacyOptIn.description.de}`
-                : `${contactData.privacyOptIn.description.en}`}
-            </p>
             <Button
               value={
-                language === "DE"
-                  ? `${contactData.button.value.de}`
+                language === "EN"
+                  ? `${contactData.button.value.esp}`
                   : `${contactData.button.value.en}`
               }
               iconSVG={contactData.icon}

@@ -18,8 +18,8 @@ const LanguageSwitch: React.FC = () => {
         <label
           className="tgl-btn"
           htmlFor="toggle-language"
-          data-tg-off={buttonLabels.language.de}
-          data-tg-on={buttonLabels.language.en}
+          data-tg-off={buttonLabels.language.en}
+          data-tg-on={buttonLabels.language.esp}
         ></label>
       </div>
     </React.Fragment>

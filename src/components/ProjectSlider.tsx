@@ -26,10 +26,10 @@ const ProjectSlider: React.FC = () => {
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
   const notifyServerRequest = () => {
-    if (language === "DE") {
-      toast.info(toastMessages.loadingProject.de);
-    } else {
+    if (language === "EN") {
       toast.info(toastMessages.loadingProject.en);
+    } else {
+      toast.info(toastMessages.loadingProject.esp);
     }
   };
 
@@ -73,11 +73,11 @@ const ProjectSlider: React.FC = () => {
             >
               <p className="text-[--white] mt-16 mb-6">
                 <span className="text-[--orange]">&lt;</span>
-                {language === "DE" ? "Projekte" : "Projects"}
+                {language === "ESP" ? "Projects" : "Proyectos"}
                 <span className="text-[--orange]">/&gt;</span>
               </p>
               <h2 className="text-[--white] mb-16">
-                {language === "DE" ? "Meine Projekte" : "My Projects"}
+                {language === "ESP" ? "My Projects" : "Mis Proyectos"}
               </h2>
             </motion.div>
             <Swiper
@@ -104,13 +104,13 @@ const ProjectSlider: React.FC = () => {
                     <h2>{project.title}</h2>
 
                     <p className="text-white">
-                      {language === "DE"
+                      {language === "ESP"
                         ? project.description
-                        : project.description_EN}
+                        : project.description_ESP}
                     </p>
                     <div className="technologies">
                       <h3>
-                        {language === "DE" ? "Technologien" : "Technologies"}
+                        {language === "ESP" ? "Technologies" : "Tecnologías"}
                       </h3>
                       <div className="grid grid-cols-6 gap-10 p-4">
                         {project.technologies.map(
@@ -129,24 +129,27 @@ const ProjectSlider: React.FC = () => {
                     </div>
                     <div className="buttons flex gap-10">
                       <Button
-                        label="Live Demo"
+                        label="Go to proyect"
                         link={project.deploymenturl}
                         iconSVG={project.deploymenticon}
                         buttoncolor={project.colors.main}
                         iconcolor={project.colors.icon}
                         onClick={notifyServerRequest}
                       />
-                      <Button
-                        label="Github Repository"
-                        link={project.githuburl}
-                        iconSVG={project.githubicon}
-                        buttoncolor={project.colors.main}
-                        iconcolor={project.colors.icon}
-                      />
+                        {project.title === 'INEGI - Graph Generating Chatbot' ?
+                            <Button
+                                label="GitHub"
+                                link={project.githuburl}
+                                iconSVG={project.githubicon}
+                                buttoncolor={project.colors.main}
+                                iconcolor={project.colors.icon}
+                                onClick={notifyServerRequest}
+                            /> : null
+                            }
                     </div>
                   </div>
 
-                  <div className="right-content relative h-[40rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
+                  <div className="right-content relative h-[60rem] overflow-hidden rounded-xl w-[40%] transition-all duration-200 shadow-2xl">
                     <img
                       src={project.image}
                       alt={`${project.title}-project-mockup`}
@@ -176,23 +179,16 @@ const ProjectSlider: React.FC = () => {
                     buttoncolor={project.colors.main}
                     iconcolor={project.colors.icon}
                   />
-                  <Button
-                    label="Github Repository"
-                    link={project.githuburl}
-                    iconSVG={project.githubicon}
-                    buttoncolor={project.colors.main}
-                    iconcolor={project.colors.icon}
-                  />
                 </div>
                 <p className="text-white  max-lg:text-4xl">
-                  {language === "DE"
+                  {language === "ESP"
                     ? project.description
-                    : project.description_EN}
+                    : project.description_ESP}
                 </p>
 
                 <div className="technologies">
                   <h3 className="text-white">
-                    {language === "DE" ? "Technologien" : "Technologies"}
+                    {language === "ESP" ? "Technologies" : "Tecnologías"}
                   </h3>
                   <div className="grid grid-cols-3 gap-10 p-4">
                     {project.technologies.map(
