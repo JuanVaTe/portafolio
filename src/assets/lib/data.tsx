@@ -275,7 +275,7 @@ export const skillsDataCloudComputing = [
 ] as const;
 
 export const navLinks = [
-  { en: "Home", esp: "Home", hash: "#home", icon: GoHome },
+  { en: "Home", esp: "Inicio", hash: "#home", icon: GoHome },
   { en: "Skills", esp: "Habilidades", hash: "#skills", icon: GoStack },
   { en: "Projects", esp: "Proyectos", hash: "#projects", icon: GoProject },
   { en: "Academic", esp: "Académico", hash: "#academic", icon: GoPerson },
